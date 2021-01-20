@@ -12,6 +12,7 @@ async function readClipboard(browser) {
             input.focus();
             document.execCommand("paste");
             let data = input.value;
+            document.body.removeChild(input);
             res(data);
         });
 
